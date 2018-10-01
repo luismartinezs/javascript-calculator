@@ -1,0 +1,239 @@
+:root {
+    --btn-font: 'Share Tech Mono', monospace;
+    --display-font: 'Roboto Mono', monospace;
+    /* --brand-font: 'Maven Pro', sans-serif; */
+    --bg-dark: rgb(27, 27, 27);
+    --bg-light: rgb(70, 70, 70);
+    --pink: rgb(219, 126, 211);
+    --pink-text: rgb(231, 80, 219);
+    --dark-pink: rgb(116, 70, 112);
+    --dark-pink-hover: rgb(114, 38, 108);
+    --white: rgb(235, 233, 240);
+    --black: rgb(51, 51, 51);
+    --display: rgb(206, 218, 204);
+}
+
+.App {
+    text-align: center;
+}
+
+.container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.app-bg {
+    background: radial-gradient(var(--bg-light) 0, var(--bg-dark) 100%);
+    width: 100vw;
+    height: 100vh;
+}
+
+#frame {
+    height: 400px;
+    width: 300px;
+    background-color: var(--white);
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content: start;
+}
+
+#display-panel {
+    width: 85%;
+    height: 20%;
+    background-color: var(--pink);
+    border-radius: 10px;
+    margin: 15px 0 0 0;
+}
+
+#display {
+    width: 95%;
+    height: 85%;
+    background-color: var(--display);
+    border-radius: 3px;
+    box-shadow: inset 0 0 3px var(--black);
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+#display-calculation-top {
+    font-family: var(--display-font);
+    font-size: 1.3rem;
+    text-align: right;
+    margin-bottom: 0;
+    margin-top: 5px;
+    height: 2.2rem;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: clip; 
+    line-height: 1.1rem;
+}
+
+#display-calculation {
+    font-family: var(--display-font);
+    font-size: 3rem;
+    text-align: right;
+    margin-bottom: 5px;
+    margin-top: -3px;
+    height: 3rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 0px;
+    width: 95%;
+    height: 71%;
+    background-color: var(--pink);
+    border-radius: 10px;
+    margin: 15px 0 0 0;
+    padding: 10px;
+}
+
+.grid-item {
+    font-family: var(--btn-font);
+    font-size: 2rem;
+    border: 1px solid var(--dark-pink);
+}
+
+.text-vertical-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    border: 1px solid var(--black);
+    margin: 0;
+}
+
+.btn-pink {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+.btn-pink:hover {
+    background-color: var(--pink-text);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+.btn-pink-dark {
+    background-color: var(--dark-pink);
+    color: var(--white);
+}
+
+.btn-pink-dark:hover {
+    background-color: var(--dark-pink-hover);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+.btn-white {
+    background-color: var(--white);
+    color: var(--pink-text);
+}
+
+.btn-white:hover {
+    background-color: var(--pink-text);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+#clear {
+    grid-column: 1 / span 2;
+}
+
+#divide {
+    grid-column: 3 / span 1;
+}
+
+#multiply {
+    grid-column: 4 / span 1;
+}
+
+#subtract {
+    grid-column: 4 / span 1;
+}
+
+#add {
+    grid-column: 4 / span 1;
+}
+
+#one {
+    grid-column: 1 / span 1;
+}
+
+#two {
+    grid-column: 2 / span 1;
+}
+
+#three {
+    grid-column: 3 / span 1;
+}
+
+#four {
+    grid-column: 1 / span 1;
+}
+
+#five {
+    grid-column: 2 / span 1;
+}
+
+#six {
+    grid-column: 3 / span 1;
+}
+
+#seven {
+    grid-column: 1 / span 1;
+}
+
+#eight {
+    grid-column: 2 / span 1;
+}
+
+#nine {
+    grid-column: 3 / span 1;
+}
+
+#zero {
+    grid-column: 1 / span 2;
+}
+
+#decimal {
+    grid-column: 3 / span 1;
+}
+
+#equals {
+    grid-area: 4 / 4 / span 2 / span 1;
+}
+
+.drum-pad {
+    border-radius: 50%;
+    border: 1px solid var(--bg-light);
+    box-shadow: 1px 1px 3px 0 var(--bg-light);
+    width: 75px;
+    height: 75px;
+    background: radial-gradient(var(--btn-dark) 50%, var(--btn-mid) 80%, var(--btn-light) 95%, var(--btn-dark) 100%);
+    color: var(--white-text);
+    font-size: 3rem;
+    font-family: 'Russo One', sans-serif;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.clicked {
+    background: radial-gradient(var(--display-black) 90%, var(--btn-mid) 80%, var(--btn-light) 95%, var(--btn-dark) 100%);
+    color: var(--white-text);
+}
